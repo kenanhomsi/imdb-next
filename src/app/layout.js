@@ -1,6 +1,8 @@
 import "./globals.css";
 import {Inter} from 'next/font/google'
 import Header from "@/components/Header";
+import Providers from "./Providers";
+
 export const metadata = {
   title: "Imdb-clone",
   description: "this is db movie clone",
@@ -10,8 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Header />
-        {children}
+        <Providers>
+            <Header />
+            {children}
+        </Providers>
       </body>
     </html>
   );
