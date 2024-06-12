@@ -1,17 +1,11 @@
 import React from 'react'
+import Card from './Card'
 
 export default function Results({results}) {
   return (
-    <div className='flex flex-col gap-5'>
-        { results.map((result,index)=>{
-            return(
-                <div key={result.id} >
-                    <h1>{result.original_title}</h1>
-                    <p>{result.overview}</p>
-                    <p>{result.release_date}</p>
-                    <p>{result.release_date}</p>
-                </div>
-            )
+    <div className=' sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4 '>
+        { results.map((result)=>{
+            return( <Card key={result.id} result={result} />)
         })
         }
     </div>
