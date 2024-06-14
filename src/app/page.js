@@ -14,7 +14,7 @@ export default async  function Home({searchParams}) {
   return (
     <div className="">
         <Results results={results} />
-      
+          
     </div>
   )
 }
