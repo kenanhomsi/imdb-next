@@ -1,4 +1,5 @@
-import Results from "@/components/Results";
+// import Results from "@/components/Results";
+import Results from "../../../components/Results";
 
 const api_key=process.env.API_KEY;
 
@@ -20,3 +21,5 @@ export default async function page({params}) {
     </div>
   )
 }
+
+
